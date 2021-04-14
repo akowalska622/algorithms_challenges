@@ -8,7 +8,11 @@ Examples
 "a234"   -->  false
 */
 
-function validatePIN (pin) {
-  let regex = /^\d+$/
-  return (pin.length === 4 || pin.length === 6) && regex.test(pin)
+function validatePIN(pin) {
+  let regex = /^(\d{4}|\d{6})$/;
+  return regex.test(pin);
 }
+
+console.log(validatePIN('1234'));
+console.log(validatePIN('12345'));
+console.log(validatePIN('a234'));
