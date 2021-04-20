@@ -30,9 +30,6 @@ This kata is part of the Coding Meetup series which includes a number of short a
 */
 
 function findSenior(list) {
-  let oldest = 0;
-  for (let dev of list) {
-    if (dev.age > oldest) oldest = dev.age
-  }
+  let oldest = Math.max(...list.map(person => person.age))
   return list.filter(x => x.age === oldest)
 }
