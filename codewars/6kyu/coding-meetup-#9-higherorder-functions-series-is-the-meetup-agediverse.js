@@ -35,25 +35,35 @@ This kata is part of the Coding Meetup series which includes a number of short a
 */
 
 function isAgeDiverse(list) {
-	let count = {}
-  
+  let count = {};
+
   for (let dev of list) {
-  	if (Math.floor(dev.age / 10) === 1) count.teens = (count.teens || 0) + 1
-    if (Math.floor(dev.age / 10) === 2) count.twenties = (count.twenties || 0) + 1
-    if (Math.floor(dev.age / 10) === 3) count.thirties = (count.thirties || 0) + 1
-    if (Math.floor(dev.age / 10) === 4) count.forties = (count.forties || 0) + 1
-    if (Math.floor(dev.age / 10) === 5) count.fifties = (count.fifties || 0) + 1
-    if (Math.floor(dev.age / 10) === 6) count.sixties = (count.sixties || 0) + 1
-    if (Math.floor(dev.age / 10) === 7) count.seventies = (count.seventies || 0) + 1
-    if (Math.floor(dev.age / 10) === 8) count.eighties = (count.eighties || 0) + 1
-    if (Math.floor(dev.age / 10) === 9) count.nineties = (count.nineties || 0) + 1
-    if (dev.age > 100) count.centenarian = (count.centenarian || 0) + 1
+    if (Math.floor(dev.age / 10) === 1) count.teens = (count.teens || 0) + 1;
+    if (Math.floor(dev.age / 10) === 2)
+      count.twenties = (count.twenties || 0) + 1;
+    if (Math.floor(dev.age / 10) === 3)
+      count.thirties = (count.thirties || 0) + 1;
+    if (Math.floor(dev.age / 10) === 4)
+      count.forties = (count.forties || 0) + 1;
+    if (Math.floor(dev.age / 10) === 5)
+      count.fifties = (count.fifties || 0) + 1;
+    if (Math.floor(dev.age / 10) === 6)
+      count.sixties = (count.sixties || 0) + 1;
+    if (Math.floor(dev.age / 10) === 7)
+      count.seventies = (count.seventies || 0) + 1;
+    if (Math.floor(dev.age / 10) === 8)
+      count.eighties = (count.eighties || 0) + 1;
+    if (Math.floor(dev.age / 10) === 9)
+      count.nineties = (count.nineties || 0) + 1;
+    if (dev.age > 100) count.centenarian = (count.centenarian || 0) + 1;
   }
-  
-    let size = 0
-    for (let key in count) {
-        if (count.hasOwnProperty(key)) size++;
-    }
-    
-    return size === 10
+
+  // let size = 0
+  // for (let key in count) {
+  //     if (count.hasOwnProperty(key)) size++;
+  // }
+
+  let size = Object.keys(count).length;
+
+  return size === 10;
 }
