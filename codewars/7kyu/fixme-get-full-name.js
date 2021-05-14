@@ -19,7 +19,7 @@ class Dinglemouse{
   }
   
   getFullName(){
-    return this.firstName+" "+this.lastName
+    return this.firstName+ (this.firstName && this.lastName ? " " : "")+this.lastName
   }
   
 }
