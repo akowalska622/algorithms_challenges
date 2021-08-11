@@ -13,10 +13,15 @@ isOpposite("AB","Ab") should return false;
 isOpposite("","") should return false;
 */
 
-function isOpposite(s1,s2){
-	if (!s1 || !s2 || s1.length !== s2.length) return false
-  
-  let opposite = s1.split("").map(x => x === x.toLowerCase() ?  x.toUpperCase() : x.toLowerCase()).join("")
-  
-  return opposite === s2
+function isOpposite(s1, s2) {
+  if (!s1 || !s2 || s1.length !== s2.length) return false;
+
+  let opposite = s1
+    .split('')
+    .map(x => (x === x.toLowerCase() ? x.toUpperCase() : x.toLowerCase()))
+    .join('');
+
+  return opposite === s2;
 }
+
+module.exports = isOpposite;

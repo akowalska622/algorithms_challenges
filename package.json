@@ -1,0 +1,22 @@
+{
+  "name": "algorithms_challenges",
+  "version": "1.0.0",
+  "description": "This repository contains my solutions for algorithms challenges from various levels. All of them are in JavaScript or TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akowalska622/algorithms_challenges.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akowalska622/algorithms_challenges/issues"
+  },
+  "homepage": "https://github.com/akowalska622/algorithms_challenges#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}

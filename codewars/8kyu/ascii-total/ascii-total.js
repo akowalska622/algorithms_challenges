@@ -3,9 +3,12 @@ You'll be given a string, and have to return the sum of all characters as an int
 
 examples:
 
-uniTotal("a") == 97 uniTotal("aaa") == 291
+uniTotal("a") == 97 
+uniTotal("aaa") == 291
 */
 
 function uniTotal(s) {
-  return [...s].map(x => x = x.charCodeAt(0)).reduce((a, b) => a+b, 0)
+  return [...s].map(x => (x = x.charCodeAt(0))).reduce((a, b) => a + b, 0);
 }
+
+module.exports = uniTotal;
